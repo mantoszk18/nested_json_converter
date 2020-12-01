@@ -1,0 +1,15 @@
+Design considerations:
+
+anytree library has been used to make the code and process more readable and flexible.
+It's much easier to operate on a intermediate tree structure than on a target nested dictionaries.
+
+setup.py is not included to keep it simple (in a non-web version)
+
+I've been working with Django mostly, but have some flask experience. 
+So this is my quick take on structuring the flask app. I did mimic how it's done in Django a bit, hope this will not make any Flaskers cringe. :)
+
+
+Performance considerations:
+
+The output data can not be constructed progressively, but has to be returned as a whole under current requirements.
+That's why the input data cannot be processed as a stream - which would be more memory-efficient.
